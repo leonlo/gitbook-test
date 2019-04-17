@@ -1,0 +1,29 @@
+{
+    "title": "Standard WebService Design - Southeast Insurance and Finance Group (SEG)",
+    "author": "LeonLuo <leon.luo@ebaotech.com>",
+    "generator": "site",
+    "structure": {
+        "readme": "index.md",
+        "summary": "summary.md"
+    },
+    "plugins": ["splitter", "insert-logo", "favicon", "-sharing"],
+    "pluginsConfig": {
+        "insert-logo": {
+            "url": "/resources/ebao_logo.svg",
+            "style": "background: none; max-height: 33px; min-height: 16px; padding-left: 0px;"
+        },
+        "favicon": {
+            "shortcut": "resources/favicon.ico",
+            "bookmark": "resources/favicon.ico",
+            "appleTouch": "resources/favicon.ico",
+            "appleTouchMore": {
+                "120x120": "resources/favicon.ico",
+                "180x180": "resources/favicon.ico"
+            }
+        }
+    },
+    "links": {},
+    "styles": {
+        "website": "styles/website.css"
+    }
+}

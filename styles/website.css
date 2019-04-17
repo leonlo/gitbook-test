@@ -1,0 +1,61 @@
+.gitbook-link {
+    display: none !important;
+}
+
+.book-summary {
+    background: #11293a;
+}
+
+.book .book-summary .book-logo {
+    text-align: left;
+    padding: 10px;
+    background: #11293a;
+}
+
+.book-summary ul.summary li.header {
+    text-transform: none;
+    color: white;
+    font-weight: bold;
+}
+
+.book-summary ul.summary li.active>a {
+    color: white;
+    font-size: small;
+    font-weight: bold;
+}
+
+.book-summary ul.summary li a {
+    color: white;
+    font-size: small;
+}
+
+#book-search-input {
+    background: #11293a;
+}
+
+#book-search-input input,
+#book-search-input input:focus,
+#book-search-input input:hover {
+    color: white;
+    border: 1px solid white;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: white;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: white;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: white;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: white;
+}

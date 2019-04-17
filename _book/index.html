@@ -1,0 +1,448 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Introduction · Standard WebService Design - Southeast Insurance and Finance Group (SEG)</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="LeonLuo <leon.luo@ebaotech.com>">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="products/cmi/" />
+    
+    
+
+    
+        <link rel="shortcut icon" href='resources/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='resources/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='resources/favicon.ico'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="resources/favicon.ico">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="resources/favicon.ico">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Supported Products</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="products/cmi/">
+            
+                <a href="products/cmi/">
+            
+                    
+                    1. CMI - Compulsory Motor Insurance
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="products/cmi/send-policy.html">
+            
+                <a href="products/cmi/send-policy.html">
+            
+                    
+                    1.1 SendPolicy Method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="products/cmi/calculate-premium.html">
+            
+                <a href="products/cmi/calculate-premium.html">
+            
+                    
+                    1.2 Calculate Premium Method
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="products/vmi/">
+            
+                <a href="products/vmi/">
+            
+                    
+                    2. VMI - Voluntary Motor Insurance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="products/hg/">
+            
+                <a href="products/hg/">
+            
+                    
+                    3. HG - Home Guard
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Others</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="misc/">
+            
+                <a href="misc/">
+            
+                    
+                    1. Miscellaneous Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="endorsement/">
+            
+                <a href="endorsement/">
+            
+                    
+                    2. Endorsement Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Introduction</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="standard-webservice-design">Standard WebService Design</h1>
+<p><br>
+<br>
+<br></p>
+<h2 id="prepared-for">Prepared for</h2>
+<p>Southeast Insurance and Finance Group (SEG)
+Version 0.5
+<br></p>
+<h2 id="prepared-by">Prepared by</h2>
+<p>eBaoTech Corporation - eBaoCloud Thailand
+<br></p>
+<h2 id="contributed-by">Contributed by</h2>
+<p>Leon Luo </p>
+<p><br></p>
+<h2 id="revision">Revision</h2>
+<h3 id="change-record">Change Record</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Date</th>
+<th style="text-align:center">Author</th>
+<th style="text-align:center">Version</th>
+<th style="text-align:center">Change Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">May 8,2018</td>
+<td style="text-align:center">Leon Luo</td>
+<td style="text-align:center">0.1</td>
+<td style="text-align:center">Initial Document</td>
+</tr>
+<tr>
+<td style="text-align:center">May 9,2018</td>
+<td style="text-align:center">Leon Luo</td>
+<td style="text-align:center">0.2</td>
+<td style="text-align:center">Add comments &amp; business logic</td>
+</tr>
+<tr>
+<td style="text-align:center">July 5,2018</td>
+<td style="text-align:center">Leon Luo</td>
+<td style="text-align:center">0.3</td>
+<td style="text-align:center">Add some new columns</td>
+</tr>
+<tr>
+<td style="text-align:center">August 16,2018</td>
+<td style="text-align:center">Leon Luo</td>
+<td style="text-align:center">0.4</td>
+<td style="text-align:center">Add method for cancellation</td>
+</tr>
+<tr>
+<td style="text-align:center">March 14,2019</td>
+<td style="text-align:center">Leon Luo</td>
+<td style="text-align:center">0.5</td>
+<td style="text-align:center">Add DirectDiscount Amount, Rate &amp; ISP14 for SendPolicy</td>
+</tr>
+</tbody>
+</table>
+<h3 id="reviewers">Reviewers</h3>
+<style> table th:first-of-type { width: 88px; } </style>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Date</th>
+<th style="text-align:center">Name</th>
+<th style="text-align:center">Version Approved</th>
+<th style="text-align:center">Position</th>
+<th style="text-align:center">Advice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">May 8,2018</td>
+<td style="text-align:center">Andy Yang</td>
+<td style="text-align:center">0.1</td>
+<td style="text-align:center">Delivery Manager</td>
+<td style="text-align:center">Add flowchart and comments</td>
+</tr>
+<tr>
+<td style="text-align:center">May 18,2018</td>
+<td style="text-align:center">Maggie Luo</td>
+<td style="text-align:center">0.2</td>
+<td style="text-align:center">Business Analyst</td>
+<td style="text-align:center">Complete missing fields</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="products/cmi/" class="navigation navigation-next navigation-unique" aria-label="Next page: 1. CMI - Compulsory Motor Insurance">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"1. CMI - Compulsory Motor Insurance","level":"2.1","depth":1,"path":"products/cmi/index.md","ref":"products/cmi/index.md","articles":[{"title":"1.1 SendPolicy Method","level":"2.1.1","depth":2,"path":"products/cmi/send-policy.md","ref":"products/cmi/send-policy.md","articles":[]},{"title":"1.2 Calculate Premium Method","level":"2.1.2","depth":2,"path":"products/cmi/calculate-premium.md","ref":"products/cmi/calculate-premium.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["splitter","insert-logo","favicon","-sharing","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"resources/favicon.ico","bookmark":"resources/favicon.ico","appleTouch":"resources/favicon.ico","appleTouchMore":{"120x120":"resources/favicon.ico","180x180":"resources/favicon.ico"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 33px; min-height: 16px; padding-left: 0px;","url":"/resources/ebao_logo.svg"}},"theme":"default","author":"LeonLuo <leon.luo@ebaotech.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"index.md","glossary":"GLOSSARY.md","summary":"summary.md"},"variables":{},"title":"Standard WebService Design - Southeast Insurance and Finance Group (SEG)","links":{},"gitbook":"*"},"file":{"path":"index.md","mtime":"2019-04-17T02:42:32.725Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-17T07:32:01.139Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

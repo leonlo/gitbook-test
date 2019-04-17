@@ -1,0 +1,628 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2. VMI - Voluntary Motor Insurance · Standard WebService Design - Southeast Insurance and Finance Group (SEG)</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="LeonLuo <leon.luo@ebaotech.com>">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-insert-logo/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../hg/" />
+    
+    
+    <link rel="prev" href="../cmi/calculate-premium.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../resources/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../resources/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../resources/favicon.ico'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../resources/favicon.ico">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../resources/favicon.ico">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Supported Products</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../cmi/">
+            
+                <a href="../cmi/">
+            
+                    
+                    1. CMI - Compulsory Motor Insurance
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../cmi/send-policy.html">
+            
+                <a href="../cmi/send-policy.html">
+            
+                    
+                    1.1 SendPolicy Method
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../cmi/calculate-premium.html">
+            
+                <a href="../cmi/calculate-premium.html">
+            
+                    
+                    1.2 Calculate Premium Method
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    2. VMI - Voluntary Motor Insurance
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../hg/">
+            
+                <a href="../hg/">
+            
+                    
+                    3. HG - Home Guard
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Others</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../misc/">
+            
+                <a href="../../misc/">
+            
+                    
+                    1. Miscellaneous Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../../endorsement/">
+            
+                <a href="../../endorsement/">
+            
+                    
+                    2. Endorsement Service
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >2. VMI - Voluntary Motor Insurance</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="endpoint-address">Endpoint Address</h3>
+<p><a href="https://thuat.ebaocloud.com/gi/webservice/seg/vmi?wsdl" target="_blank">https://thuat.ebaocloud.com/gi/webservice/seg/vmi?wsdl</a></p>
+<h3 id="sendpolicy-method">SendPolicy Method</h3>
+<p>Business Logic ignore. Please refer to <a href="../cmi/send-policy.html#send-policy-business-logic">CMI SendPolicy Method</a></p>
+<ul>
+<li>Input Parameter</li>
+</ul>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Envelope</span> <span class="hljs-attr">xmlns:soapenv</span>=<span class="hljs-string">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span> 
+  <span class="hljs-attr">xmlns:ser</span>=<span class="hljs-string">&quot;http://service.segstd.ws.sp.gs.ebao.com/&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Header</span>/&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">soapenv:Body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ser:SendPolicy</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">username</span>&gt;</span>TMBC<span class="hljs-tag">&lt;/<span class="hljs-name">username</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">password</span>&gt;</span>eBao1234<span class="hljs-tag">&lt;/<span class="hljs-name">password</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">info</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">PolNo</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">PolNoPmc</span>&gt;</span>NVMI0000302514<span class="hljs-tag">&lt;/<span class="hljs-name">PolNoPmc</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Barcode</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">taxInvoiceNoPmc</span>&gt;</span>TIBK80164231<span class="hljs-tag">&lt;/<span class="hljs-name">taxInvoiceNoPmc</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">taxInvoiceNo</span>/&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ReferenceNo</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceNo</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">PreviousPolNo</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">PreviousPolNo</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">PreviousPolNoPmc</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">PreviousPolNoPmc</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">CarSeat</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">CarSeat</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">CarCC</span>&gt;</span>5000<span class="hljs-tag">&lt;/<span class="hljs-name">CarCC</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">CarWeight</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">CarWeight</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">CarCode</span>&gt;</span>HO020017<span class="hljs-tag">&lt;/<span class="hljs-name">CarCode</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">CarRegistNo</span>&gt;</span>1&#xB0;&#xAE;2601<span class="hljs-tag">&lt;/<span class="hljs-name">CarRegistNo</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">CarChassisNo</span>&gt;</span>WPJPRHQUDH<span class="hljs-tag">&lt;/<span class="hljs-name">CarChassisNo</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">CarYear</span>&gt;</span>2016<span class="hljs-tag">&lt;/<span class="hljs-name">CarYear</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">CarProvince</span>&gt;</span>10<span class="hljs-tag">&lt;/<span class="hljs-name">CarProvince</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">CusPrefix</span>&gt;</span>7<span class="hljs-tag">&lt;/<span class="hljs-name">CusPrefix</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">CusFname</span>&gt;</span>haoran<span class="hljs-tag">&lt;/<span class="hljs-name">CusFname</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">CusLname</span>&gt;</span>ye<span class="hljs-tag">&lt;/<span class="hljs-name">CusLname</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">CusId</span>&gt;</span>3575622333172<span class="hljs-tag">&lt;/<span class="hljs-name">CusId</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Email</span>&gt;</span>naresak.h@segroup.co.th<span class="hljs-tag">&lt;/<span class="hljs-name">Email</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">CusType</span>&gt;</span>P<span class="hljs-tag">&lt;/<span class="hljs-name">CusType</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">PersonType</span>&gt;</span>?<span class="hljs-tag">&lt;/<span class="hljs-name">PersonType</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">CoperateType</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">CoperateType</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">CoperateBranchCode</span>&gt;</span>12345<span class="hljs-tag">&lt;/<span class="hljs-name">CoperateBranchCode</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">PersonNationalityCode</span>&gt;</span>THA<span class="hljs-tag">&lt;/<span class="hljs-name">PersonNationalityCode</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Addrs1</span>&gt;</span>Add No 12<span class="hljs-tag">&lt;/<span class="hljs-name">Addrs1</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">CusTelNumber</span>&gt;</span>0910191811<span class="hljs-tag">&lt;/<span class="hljs-name">CusTelNumber</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">CusPostCode</span>&gt;</span>10200<span class="hljs-tag">&lt;/<span class="hljs-name">CusPostCode</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">BillPrice</span>&gt;</span>6632.35<span class="hljs-tag">&lt;/<span class="hljs-name">BillPrice</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">BillStamp</span>&gt;</span>36<span class="hljs-tag">&lt;/<span class="hljs-name">BillStamp</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">BillVat</span>&gt;</span>621.50<span class="hljs-tag">&lt;/<span class="hljs-name">BillVat</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">BillPrm</span>&gt;</span>7125.5<span class="hljs-tag">&lt;/<span class="hljs-name">BillPrm</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">EffectiveDate</span>&gt;</span>20180629<span class="hljs-tag">&lt;/<span class="hljs-name">EffectiveDate</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ExpireDate</span>&gt;</span>20190629<span class="hljs-tag">&lt;/<span class="hljs-name">ExpireDate</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ProvinceCode</span>&gt;</span>10<span class="hljs-tag">&lt;/<span class="hljs-name">ProvinceCode</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">DistrictCode</span>&gt;</span>01<span class="hljs-tag">&lt;/<span class="hljs-name">DistrictCode</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">SubDistrictCode</span>&gt;</span>01<span class="hljs-tag">&lt;/<span class="hljs-name">SubDistrictCode</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">CampaignCode</span>&gt;</span>PMP120FTM3<span class="hljs-tag">&lt;/<span class="hljs-name">CampaignCode</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">PathImage</span>&gt;</span>          
+          <span class="hljs-tag">&lt;<span class="hljs-name">ImageRQ</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Name</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">Name</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Type</span>&gt;</span>0<span class="hljs-tag">&lt;/<span class="hljs-name">Type</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Base64String</span>&gt;</span>01<span class="hljs-tag">&lt;/<span class="hljs-name">Base64String</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">ByteArray</span>&gt;</span>cid:1267861750934<span class="hljs-tag">&lt;/<span class="hljs-name">ByteArray</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-name">ImageRQ</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">PathImage</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">FlagCCTV</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">FlagCCTV</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">PreferredLang</span>&gt;</span>en_US<span class="hljs-tag">&lt;/<span class="hljs-name">PreferredLang</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">DirectDiscountRate</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">DirectDiscountRate</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">DirectDiscountAmount</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">DirectDiscountAmount</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ISP14</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ISP14</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">info</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">genaratePolNo</span>&gt;</span>false<span class="hljs-tag">&lt;/<span class="hljs-name">genaratePolNo</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">genaratePDF</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">genaratePDF</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">calculatePremium</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">calculatePremium</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ser:SendPolicy</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">soapenv:Envelope</span>&gt;</span>
+</code></pre>
+<p>The basic columns are similar with CMI SendPolicy Method.
+Ignore.</p>
+<table>
+<thead>
+<tr>
+<th>info</th>
+<th>Type</th>
+<th>Length</th>
+<th>Optional</th>
+<th>Sample</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PolNo</td>
+<td>String</td>
+<td></td>
+<td>C</td>
+<td>-</td>
+<td>CMI policy number</td>
+</tr>
+<tr>
+<td>PolNoPmc</td>
+<td>String</td>
+<td></td>
+<td>C</td>
+<td>-</td>
+<td>VMI policy number</td>
+</tr>
+<tr>
+<td>Barcode</td>
+<td>String</td>
+<td></td>
+<td>C</td>
+<td>-</td>
+<td>CMI barcode number</td>
+</tr>
+<tr>
+<td>TaxInvoiceNoPmc</td>
+<td>String</td>
+<td></td>
+<td>C</td>
+<td>-</td>
+<td>VMI taxinvoice number</td>
+</tr>
+<tr>
+<td>TaxInvoiceNo</td>
+<td>String</td>
+<td></td>
+<td>C</td>
+<td>-</td>
+<td>CMI taxinvoice number</td>
+</tr>
+<tr>
+<td>ReferenceNo</td>
+<td>String</td>
+<td></td>
+<td>C</td>
+<td>-</td>
+<td>external reference number</td>
+</tr>
+<tr>
+<td>PreviousPolNo</td>
+<td>String</td>
+<td></td>
+<td>C</td>
+<td>-</td>
+<td>CMI previousPolNo</td>
+</tr>
+<tr>
+<td>PreviousPolNoPmc</td>
+<td>String</td>
+<td></td>
+<td>C</td>
+<td>-</td>
+<td>VMI previousPolNo</td>
+</tr>
+<tr>
+<td>CarCode</td>
+<td>String</td>
+<td>8</td>
+<td>M</td>
+<td>HO020017</td>
+<td>model code</td>
+</tr>
+<tr>
+<td>PersonType</td>
+<td>Integer</td>
+<td>2</td>
+<td>M</td>
+<td>01</td>
+<td>Person type must be in (1, 2)</td>
+</tr>
+<tr>
+<td>CampaignCode</td>
+<td>String</td>
+<td></td>
+<td>M</td>
+<td>PMC210MC5</td>
+<td>Plan code provided by SEG</td>
+</tr>
+<tr>
+<td>PathImage</td>
+<td>Array</td>
+<td></td>
+<td>C</td>
+<td>-</td>
+<td>if FlagCCTV is true, this field would be mandatory and must contain at least one <strong>ImageRQ</strong> element.</td>
+</tr>
+<tr>
+<td>FlagCCTV</td>
+<td>Boolean</td>
+<td></td>
+<td>M</td>
+<td>true</td>
+<td>CCTV discount</td>
+</tr>
+<tr>
+<td>PreferredLang</td>
+<td>String</td>
+<td></td>
+<td>O</td>
+<td>en_US</td>
+<td>this value should be one of en_US and th_TH</td>
+</tr>
+</tbody>
+</table>
+<p>For other missing columns, please refer to <a href="../cmi/send-policy.html#jump-to-cmi-input-desc">CMI SendPolicy Method - Input Parameter</a>.</p>
+<table>
+<thead>
+<tr>
+<th>ImageRQ</th>
+<th>Type</th>
+<th>Length</th>
+<th>Optional</th>
+<th>Sample</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>String</td>
+<td></td>
+<td>M</td>
+<td>car-image</td>
+<td></td>
+</tr>
+<tr>
+<td>Type</td>
+<td>String</td>
+<td></td>
+<td>M</td>
+<td>jpeg</td>
+<td></td>
+</tr>
+<tr>
+<td>Base64String</td>
+<td>String</td>
+<td></td>
+<td>M</td>
+<td>ignore.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Return</li>
+</ul>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">soap:Envelope</span> <span class="hljs-attr">xmlns:soap</span>=<span class="hljs-string">&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span>&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">soap:Body</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">ns2:SendPolicyResponse</span> <span class="hljs-attr">xmlns:ns2</span>=<span class="hljs-string">&quot;http://service.segstd.ws.sp.gs.ebao.com/&quot;</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-name">SendPolicyResult</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">IsSuccess</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">IsSuccess</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">PolNoPmc</span>&gt;</span>NVMI9000006185<span class="hljs-tag">&lt;/<span class="hljs-name">PolNoPmc</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">BillPrm</span>&gt;</span>2901.69<span class="hljs-tag">&lt;/<span class="hljs-name">BillPrm</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">BillStamp</span>&gt;</span>12<span class="hljs-tag">&lt;/<span class="hljs-name">BillStamp</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">BillVat</span>&gt;</span>203.96<span class="hljs-tag">&lt;/<span class="hljs-name">BillVat</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">BillPrice</span>&gt;</span>3117.65<span class="hljs-tag">&lt;/<span class="hljs-name">BillPrice</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">Errors</span>/&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">TablePDF</span>&gt;</span>https://thtst.ebaocloud.com/gi/api/std/b2b/policies/print/allinone/1282566622<span class="hljs-tag">&lt;/<span class="hljs-name">TablePDF</span>&gt;</span>
+         <span class="hljs-tag">&lt;/<span class="hljs-name">SendPolicyResult</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">ns2:SendPolicyResponse</span>&gt;</span>
+   <span class="hljs-tag">&lt;/<span class="hljs-name">soap:Body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">soap:Envelope</span>&gt;</span>
+</code></pre>
+<p>Note: SendPolicy Response here is the same with that of CMI&apos;s, please refer to <a href="../cmi/send-policy.html#jump-to-cmi-resp-desc">CMI SendPolicy Method - Retrun</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../cmi/calculate-premium.html" class="navigation navigation-prev " aria-label="Previous page: 1.2 Calculate Premium Method">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../hg/" class="navigation navigation-next " aria-label="Next page: 3. HG - Home Guard">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2. VMI - Voluntary Motor Insurance","level":"2.2","depth":1,"next":{"title":"3. HG - Home Guard","level":"2.3","depth":1,"path":"products/hg/index.md","ref":"products/hg/index.md","articles":[]},"previous":{"title":"1.2 Calculate Premium Method","level":"2.1.2","depth":2,"path":"products/cmi/calculate-premium.md","ref":"products/cmi/calculate-premium.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","insert-logo","favicon","-sharing","livereload"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"resources/favicon.ico","bookmark":"resources/favicon.ico","appleTouch":"resources/favicon.ico","appleTouchMore":{"120x120":"resources/favicon.ico","180x180":"resources/favicon.ico"}},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"style":"background: none; max-height: 33px; min-height: 16px; padding-left: 0px;","url":"/resources/ebao_logo.svg"}},"theme":"default","author":"LeonLuo <leon.luo@ebaotech.com>","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"index.md","glossary":"GLOSSARY.md","summary":"summary.md"},"variables":{},"title":"Standard WebService Design - Southeast Insurance and Finance Group (SEG)","links":{},"gitbook":"*"},"file":{"path":"products/vmi/index.md","mtime":"2019-04-17T07:35:48.747Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-17T07:32:01.139Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-insert-logo/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
